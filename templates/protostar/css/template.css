@@ -1,0 +1,149 @@
+body {
+    background: url("../images/header_bg.png") repeat-x scroll center top #FFFFFF;
+}
+body {
+    color: #4C7689;
+    font-family: Arial,sans-serif;
+    font-size: 12px;
+    margin: 0;
+    padding: 0 0 10px;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+}
+#header {
+    height: 450px;
+    overflow: hidden;
+    position: relative;
+}
+#header h1 {
+    background: url("../images/geekhub_logo.png") no-repeat scroll 0 0 transparent;
+    height: 71px;
+    left: 0;
+    position: absolute;
+    top: 19px;
+    width: 167px;
+}
+#header h1 a {
+    display: block;
+    height: 71px;
+    text-indent: -2000px;
+    width: 167px;
+}
+.nav {
+    float: right;
+    height: 42px;
+    margin: 34px 0 31px;
+    overflow: hidden;
+    width: 388px;
+}
+#header .nav li a.active, #header .nav li.active a, #header .nav li a:hover {
+    color: #E21D5D;
+}
+
+#header .nav li {
+    float: left;
+    padding: 0 0 0 26px;
+}
+#header .nav li a {
+    color: #396375;
+    display: block;
+    font-family: "Trebuchet MS";
+    font-size: 14px;
+    font-weight: bold;
+    height: 16px;
+    padding: 14px 0 10px;
+    text-transform: uppercase;
+}
+#header .links li a {
+    background: url("../images/icons_social.png") no-repeat scroll 0 0 transparent;
+    color: #396375;
+    display: block;
+    height: 42px;
+    text-indent: -400px;
+    width: 83px;
+}
+
+#header .links li a.fb {
+    background-position: 0 10px;
+}
+
+#header .links li a.vk {
+    background-position: -32px 10px;
+}
+
+#header .links li a.tw {
+    background-position: -64px 10px;
+}
+
+#header .links li a.yb {
+    background-position: -96px 10px;
+}
+
+#header .links li a.v {
+    background-position: -128px 10px;
+}
+#header .links li {
+    float: left;
+    height: 42px;
+    padding: 0 4px;
+    width: 24px;
+}
+#header .links {
+    float: right;
+    height: 42px;
+    margin: 35px 76px 0 0;
+    overflow: hidden;
+}
+div, p, a, span, em, strong, img, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, td, tr, form, fieldset, label, select, checkbox, input, textarea {
+    list-style: none outside none;
+    margin: 0;
+    outline: medium none;
+    padding: 0;
+}
+a:link, a:visited {
+    color: #E11D5D;
+    text-decoration: none;
+}
+#wrap {
+    margin: 0 auto;
+    overflow: visible;
+    padding: 0 0 60px;
+    width: 901px;
+}
+
+
+body span.line {
+    border-top: 1px solid #8EA8B3;
+    clear: both;
+    display: block;
+    height: 0;
+    overflow: hidden;
+    width: 100%;
+}
+#header h4.registration {
+    color: #246987;
+    font-family: "Trebuchet MS";
+    font-size: 52px;
+    font-weight: normal;
+    margin-top: 70px;
+    position: relative;
+    text-align: center;
+    z-index: 2;
+}
+
+#header > img {
+    display: block;
+    left: 225px;
+    position: absolute;
+    top: 165px;
+    z-index: 1;
+}
+img, fieldset {
+    border: 0 none;
+}
+#content {
+     overflow: hidden;
+     padding: 28px 0 40px;
+ }

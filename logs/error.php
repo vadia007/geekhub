@@ -6,3 +6,4 @@
 #Fields: datetime	priority	category	message
 2012-11-11T16:51:24+00:00	INFO	joomlafailure	Пустой пароль не допускается
 2012-11-12T00:00:45+00:00	INFO	joomlafailure	Пустой пароль не допускается
+2012-11-18T15:25:30+00:00	INFO	joomlafailure	Пустой пароль не допускается

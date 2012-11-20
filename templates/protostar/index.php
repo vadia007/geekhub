@@ -78,6 +78,7 @@ else
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
 <head>
+    <script type="text/javascript" src="http://userapi.com/js/api/openapi.js?34"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<jdoc:include type="head" />
 	<?php
@@ -102,8 +103,8 @@ else
 	<style type="text/css">
 		body.site
 		{
-			border-top: 3px solid <?php echo $this->params->get('templateColor');?>;
-			background-color: <?php echo $this->params->get('templateBackgroundColor');?>
+			/*border-top: 3px solid <?php echo $this->params->get('templateColor');?>;*/
+			/*background-color: <?php echo $this->params->get('templateBackgroundColor');?>*/
 		}
 		a
 		{
@@ -129,80 +130,29 @@ else
 	<![endif]-->
 </head>
 
-<body class="site <?php echo $option . " view-" . $view . " layout-" . $layout . " task-" . $task . " itemid-" . $itemid . " ";?> <?php if ($this->params->get('fluidContainer')) { echo "fluid"; } ?>">
-	<!-- Body -->
-    <div id="wrap">
-        <div id="header">
-            <h1><a href="/">GeekHub</a>
-            </h1>
-            <?php if ($this->countModules('position-1')): ?>
-                <jdoc:include type="modules" name="position-1" style="none" />
-            <?php endif; ?>
-            <span class="line"></span>
-            <h4 class="registration">Нажаль, реєстрацію на другий сезон вже зачинено. Чекаємо на Вас наступного року!</h4>
-            <img alt="splash" src="images/splash.png">
-        </div>
-        <div id="content">
+<body class="site <?php echo $option . " view-" . $view . " layout-" . $layout . " task-" . $task . " itemid-" . $itemid . " ";?> <?php if ($this->params->get('fluidContainer')) { echo "fluid"; } ?>
+    <?php if (JURI::current()!=JUri::base()): echo "inner";?> <?php endif;?> ">
+<!-- Body -->
+<div id="wrap" >
 
-        </div>
+    <div id="header">
+        <h1><a href="<?php JUri::base()?>">GeekHub</a>
+        </h1>
+        <?php if ($this->countModules('position-1')): ?>
+        <jdoc:include type="modules" name="position-1" style="none" />
+        <?php endif; ?>
+        <?php if (JURI::current()==JUri::base()):?>
+        <jdoc:include type="modules" name="position-4" style="none" />
+        <?php endif;?>
     </div>
-
-
-
-
-    <div class="body">
-		<div class="container<?php if ($this->params->get('fluidContainer')) { echo "-fluid"; } ?>">
-			<!-- Header -->
-			<div class="header">
-				<div class="header-inner">
-					<a class="brand pull-left" href="<?php echo $this->baseurl; ?>">
-						<?php echo $logo;?> <?php if ($this->params->get('sitedescription')) { echo '<div class="site-description">'. htmlspecialchars($this->params->get('sitedescription')) .'</div>'; } ?>
-					</a>
-					<div class="header-search pull-right">
-						<jdoc:include type="modules" name="position-0" style="none" />
-					</div>
-					<div class="clearfix"></div>
-				</div>
-			</div>
-
-			<jdoc:include type="modules" name="banner" style="xhtml" />
-			<div class="row-fluid">
-				<?php if ($this->countModules('position-8')): ?>
-				<!-- Begin Sidebar -->
-				<div id="sidebar" class="span3">
-					<div class="sidebar-nav">
-						<jdoc:include type="modules" name="position-8" style="xhtml" />
-					</div>
-				</div>
-				<!-- End Sidebar -->
-				<?php endif; ?>
-				<div id="contentt" class="<?php echo $span;?>">
-					<!-- Begin Content -->
-					<jdoc:include type="modules" name="position-3" style="xhtml" />
-					<jdoc:include type="message" />
-					<jdoc:include type="component" />
-					<jdoc:include type="modules" name="position-2" style="none" />
-					<!-- End Content -->
-				</div>
-				<?php if ($this->countModules('position-7')) : ?>
-				<div id="aside" class="span3">
-					<!-- Begin Right Sidebar -->
-					<jdoc:include type="modules" name="position-7" style="well" />
-					<!-- End Right Sidebar -->
-				</div>
-				<?php endif; ?>
-			</div>
-		</div>
-	</div>
-	<!-- Footer -->
-	<div class="footer">
-		<div class="container<?php if ($this->params->get('fluidContainer')) { echo "-fluid"; } ?>">
-			<hr />
-			<jdoc:include type="modules" name="footer" style="none" />
-			<p class="pull-right"><a href="#top" id="back-top"><?php echo JText::_('TPL_PROTOSTAR_BACKTOTOP'); ?></a></p>
-			<p>&copy; <?php echo $sitename; ?> <?php echo date('Y');?></p>
-		</div>
-	</div>
-	<jdoc:include type="modules" name="debug" style="none" />
+    <div id="content">
+        <jdoc:include type="component" />
+        <jdoc:include type="modules" name="position-5" style="none" />
+    </div>
+    <div id="line"></div>
+    <jdoc:include type="modules" name="position-2" style="none" />
+    <jdoc:include type="modules" name="position-3" style="none" />
+    <span id="copy">© Copyright <?php echo date('Y');?></span>
+</div>
 </body>
 </html>
